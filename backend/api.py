@@ -1377,6 +1377,8 @@ if FRONTEND_DIST.is_dir() and (FRONTEND_DIST / "index.html").is_file():
             response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
             response.headers["Pragma"] = "no-cache"
             response.headers["Expires"] = "0"
+        # v5.1: expose app version so browsers/agents can confirm they hit v5.1
+        response.headers["X-App-Version"] = f"AI-Academic-Review-v{PIPELINE_VERSION}"
         return response
 
     app.mount("/", StaticFiles(directory=str(FRONTEND_DIST), html=True), name="static")
@@ -1400,5 +1402,12 @@ else:
 if __name__ == "__main__":
     import uvicorn
     logging.basicConfig(level=logging.INFO)
+    # v5.1: print startup info so users can confirm they are running v5.1
+    print("=" * 50)
+    print(f"  AI学术审查系统 v{PIPELINE_VERSION}")
+    print(f"  Project root : {BASE_DIR.parent}")
+    print(f"  Frontend dist: {FRONTEND_DIST}")
+    print(f"  服务地址      : http://127.0.0.1:{os.getenv('PORT', '8000')}/")
+    print("=" * 50)
     uvicorn.run("api:app", host=os.getenv("HOST", "127.0.0.1"),
                 port=int(os.getenv("PORT", "8000")), reload=False)
