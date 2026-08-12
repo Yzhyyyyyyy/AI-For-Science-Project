@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+import random
 import socket
 import sys
 import threading
@@ -18,7 +19,8 @@ HOST = "127.0.0.1"
 PORT = 8000
 VERSION = "5.1"
 ROOT = Path(__file__).resolve().parent
-APP_URL = f"http://{HOST}:{PORT}/"
+# v5.1: append version + cache-buster so browser never shows a stale old frontend
+APP_URL = f"http://{HOST}:{PORT}/?version=v5.1&t={{}}"
 HEALTH_URL = f"http://{HOST}:{PORT}/api/health?client_version={VERSION}"
 
 
@@ -43,11 +45,12 @@ def open_browser_when_ready() -> None:
     for _ in range(120):
         health = read_health()
         if health and str(health.get("version")) == VERSION:
-            print(f"[4/4] 页面已就绪，正在打开 {APP_URL}", flush=True)
-            webbrowser.open(APP_URL, new=2)
+            url = APP_URL.format(random.randrange(100000, 999999))
+            print(f"[4/4] 页面已就绪，正在打开 {url}", flush=True)
+            webbrowser.open(url, new=2)
             return
         time.sleep(0.5)
-    print(f"[提示] 浏览器未自动打开，请手动访问 {APP_URL}", flush=True)
+    print(f"[提示] 浏览器未自动打开，请手动访问 {APP_URL.format('')}", flush=True)
 
 
 def main() -> int:
@@ -55,8 +58,9 @@ def main() -> int:
     if health:
         running_version = str(health.get("version") or "unknown")
         if running_version == VERSION:
+            url = APP_URL.format(random.randrange(100000, 999999))
             print(f"[提示] v{VERSION} 服务已经在运行，直接打开网页。", flush=True)
-            webbrowser.open(APP_URL, new=2)
+            webbrowser.open(url, new=2)
             return 10
         print(
             f"[错误] 8000 端口正在运行 v{running_version}，但当前程序是 v{VERSION}。\n"
@@ -85,7 +89,7 @@ def main() -> int:
 
     import uvicorn
 
-    print(f"[3/4] 正在启动 v{VERSION} 服务：{APP_URL}", flush=True)
+    print(f"[3/4] 正在启动 v{VERSION} 服务：{APP_URL.format('')}", flush=True)
     print("使用期间请保持此窗口开启；按 Ctrl+C 可停止服务。", flush=True)
     uvicorn.run("api:app", host=HOST, port=PORT, log_level="info")
     return 0
