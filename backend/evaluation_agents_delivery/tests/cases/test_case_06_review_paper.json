@@ -1,0 +1,91 @@
+{
+  "paper_info": {
+    "title": "计算光谱成像系统及光谱重建算法综述",
+    "authors": ["刘新宇", "陈雅婷", "曹良才"],
+    "abstract": "本文系统综述计算光谱成像的理论框架、光学编码策略和光谱重建算法，重点归纳振幅编码、波长编码、波前编码和多孔径编码等典型路线，并讨论深度学习重建方法的发展趋势与挑战。",
+    "keywords": ["计算光谱成像", "综述", "压缩感知", "深度学习"]
+  },
+  "metadata": {
+    "journal": "光学 精密工程",
+    "journal_level": "中文核心期刊",
+    "citation_count": 0,
+    "publication_year": 2026,
+    "open_data": false,
+    "open_code": false,
+    "external_sources": []
+  },
+  "content": {
+    "full_text": "本文为综述性论文。论文首先介绍计算光谱成像的压缩感知基础，随后按照振幅编码、波长编码、波前编码和多孔径编码对已有光学编码系统进行分类，引用多个已有研究说明各路线的系统结构、优势和局限。论文还综述了基于先验约束的迭代重建算法和基于深度学习的端到端重建模型，并指出现有深度学习方法在复杂自然场景中的泛化性能仍有待提升。全文没有提出新的实验系统、原创算法或新数据集，也没有声称进行了元分析或定量统计综合。结论认为计算光谱成像正在从实验室研究走向工程应用，但光学编码器件加工一致性、系统成本、重建算法实时性和泛化性仍是关键挑战。",
+    "sections": [
+      {
+        "section_title": "引言",
+        "section_text": "论文说明传统扫描式光谱成像存在成像速度慢、响应延迟高和数据量大的问题，并引出计算光谱成像的压缩观测思想。"
+      },
+      {
+        "section_title": "方法",
+        "section_text": "论文按照光学编码方式组织文献，将现有系统分为振幅编码、波长编码、波前编码和多孔径编码，并分别介绍典型工作。"
+      },
+      {
+        "section_title": "结论",
+        "section_text": "论文总结计算光谱成像的工程应用前景，并指出制造一致性、系统成本和算法泛化性等挑战。"
+      }
+    ],
+    "references_text": "文中引用压缩感知、CASSI、单像素光谱成像、深度学习光谱重建等多类已有研究。"
+  },
+  "tables": [
+    {
+      "table_id": "table_1",
+      "title": "典型计算光谱成像编码技术对比",
+      "caption": "从编码方式、优势、局限和代表性工作角度比较已有技术路线。",
+      "columns": ["编码方式", "优势", "局限", "代表性文献"],
+      "rows": [
+        ["振幅编码", "架构成熟，易于实现", "可能存在光通量损失", "[37-44]"],
+        ["波长编码", "系统紧凑，可集成到传感器", "滤波阵列制造难度较高", "[68-80]"],
+        ["波前编码", "系统轻量，光通量利用率高", "对重建算法依赖强", "[84-92]"]
+      ],
+      "source_location": "正文表格"
+    }
+  ],
+  "figures": [],
+  "data_info": {
+    "data_sources": [],
+    "sample_size": "",
+    "sample_scope": "",
+    "variables": [],
+    "missing_value_handling": "不适用：综述论文未开展原始数据实验",
+    "preprocessing": "不适用：综述论文未开展原始数据实验",
+    "train_test_split": "不适用：综述论文未开展模型训练实验"
+  },
+  "method_info": {
+    "research_question": "计算光谱成像系统与光谱重建算法的发展脉络、典型路线和关键挑战是什么？",
+    "hypothesis": "未说明",
+    "method_summary": "通过文献归纳和分类比较，总结计算光谱成像的主要光学编码系统和重建算法。",
+    "baseline_methods": [],
+    "ablation_study": "不适用：综述论文未提出新模型模块",
+    "evaluation_metrics": [],
+    "main_results": "形成对编码系统、重建算法、优势局限和未来挑战的归纳总结。"
+  },
+  "ethics_info": {
+    "ethics_approval": "未说明",
+    "informed_consent": "未说明",
+    "privacy_protection": "未说明",
+    "data_authorization": "未说明",
+    "conflict_of_interest": "未说明",
+    "affected_groups": []
+  },
+  "innovation_info": {
+    "claimed_contributions": ["系统梳理计算光谱成像系统及光谱重建算法", "归纳典型光学编码策略", "总结发展趋势及关键挑战"],
+    "related_work_summary": "论文围绕压缩感知、光学编码系统和光谱重建算法组织已有研究。",
+    "novelty_claims": [],
+    "difference_from_prior_work": "未明确说明与已有综述的差异。",
+    "practical_value": "为理解计算光谱成像系统设计和算法选择提供参考。",
+    "theoretical_value": "通过分类框架组织已有技术路线。"
+  },
+  "review_context": {
+    "target_domain": "计算光谱成像",
+    "evaluation_purpose": "科研成果综合评价",
+    "selected_frontend_options": ["数据可靠性", "创新性", "综述贡献"],
+    "paper_type": "review",
+    "retry_feedback": null
+  }
+}

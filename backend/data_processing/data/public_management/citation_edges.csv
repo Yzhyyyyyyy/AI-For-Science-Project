@@ -1,0 +1,5 @@
+source_id,target_id,relation,evidence,source_file
+pm_classic_006,pm_classic_001,theoretical_dialogue,"New public management discussions often contrast managerial reform with administrative behavior and bureaucracy traditions.",classic_literature.json
+pm_classic_006,pm_classic_008,theoretical_dialogue,"New public management reform is commonly compared with bureaucracy and administrative control.",classic_literature.json
+pm_classic_003,pm_classic_004,policy_process_related,"Agenda setting and implementation are adjacent stages in public policy process analysis.",classic_literature.json
+pm_classic_002,pm_classic_007,institutional_dialogue,"Common-pool resource governance draws on institutional analysis and organizational rule systems.",classic_literature.json

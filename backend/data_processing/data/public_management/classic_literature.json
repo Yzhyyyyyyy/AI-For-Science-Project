@@ -1,0 +1,80 @@
+{
+  "schema_version": "public_management_classic_literature_v1",
+  "last_cleaned": "2026-08-10",
+  "scope": "public_management_classic_literature_seed_library",
+  "notes": "公共管理经典文献种子库，用于学术影响力与理论对话识别；不是全量书目。",
+  "literature": [
+    {
+      "literature_id": "pm_classic_001",
+      "title": "Administrative Behavior",
+      "authors": ["Herbert A. Simon"],
+      "year": 1947,
+      "aliases": ["行政行为"],
+      "topic_tags": ["decision_making", "bounded_rationality", "organization"],
+      "canonical_type": "book"
+    },
+    {
+      "literature_id": "pm_classic_002",
+      "title": "Governing the Commons",
+      "authors": ["Elinor Ostrom"],
+      "year": 1990,
+      "aliases": ["公共事务的治理之道"],
+      "topic_tags": ["common_pool_resources", "institutional_analysis", "governance"],
+      "canonical_type": "book"
+    },
+    {
+      "literature_id": "pm_classic_003",
+      "title": "Agendas, Alternatives, and Public Policies",
+      "authors": ["John W. Kingdon"],
+      "year": 1984,
+      "aliases": ["多源流理论", "Multiple Streams"],
+      "topic_tags": ["agenda_setting", "policy_process"],
+      "canonical_type": "book"
+    },
+    {
+      "literature_id": "pm_classic_004",
+      "title": "Implementation",
+      "authors": ["Jeffrey L. Pressman", "Aaron Wildavsky"],
+      "year": 1973,
+      "aliases": ["政策执行"],
+      "topic_tags": ["policy_implementation", "intergovernmental_relations"],
+      "canonical_type": "book"
+    },
+    {
+      "literature_id": "pm_classic_005",
+      "title": "Street-Level Bureaucracy",
+      "authors": ["Michael Lipsky"],
+      "year": 1980,
+      "aliases": ["街头官僚"],
+      "topic_tags": ["street_level_bureaucracy", "public_service"],
+      "canonical_type": "book"
+    },
+    {
+      "literature_id": "pm_classic_006",
+      "title": "A Public Management for All Seasons?",
+      "authors": ["Christopher Hood"],
+      "year": 1991,
+      "aliases": ["New Public Management", "新公共管理"],
+      "topic_tags": ["new_public_management", "reform"],
+      "canonical_type": "article"
+    },
+    {
+      "literature_id": "pm_classic_007",
+      "title": "The New Institutionalism: Organizational Factors in Political Life",
+      "authors": ["James G. March", "Johan P. Olsen"],
+      "year": 1984,
+      "aliases": ["新制度主义"],
+      "topic_tags": ["institutionalism", "organization"],
+      "canonical_type": "article"
+    },
+    {
+      "literature_id": "pm_classic_008",
+      "title": "Bureaucracy",
+      "authors": ["James Q. Wilson"],
+      "year": 1989,
+      "aliases": ["官僚机构"],
+      "topic_tags": ["bureaucracy", "organization", "public_administration"],
+      "canonical_type": "book"
+    }
+  ]
+}

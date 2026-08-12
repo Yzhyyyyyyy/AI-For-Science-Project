@@ -1,0 +1,88 @@
+{
+  "schema_version": "public_management_journal_tiers_v1",
+  "last_cleaned": "2026-08-10",
+  "scope": "public_management_cssci_ssci_seed_library",
+  "notes": "公共管理领域 CSSCI/SSCI 种子库，用于学术影响力与期刊匹配度引擎；不是全量目录。",
+  "journals": [
+    {
+      "journal_id": "pm_journal_cssci_001",
+      "name": "公共管理学报",
+      "aliases": ["Journal of Public Management"],
+      "source_index": ["CSSCI"],
+      "tier": "CSSCI",
+      "field": "公共管理",
+      "country_region": "CN",
+      "notes": "公共管理领域中文核心种子期刊"
+    },
+    {
+      "journal_id": "pm_journal_cssci_002",
+      "name": "中国行政管理",
+      "aliases": ["Chinese Public Administration"],
+      "source_index": ["CSSCI"],
+      "tier": "CSSCI",
+      "field": "公共管理",
+      "country_region": "CN",
+      "notes": "行政管理与政府治理方向中文种子期刊"
+    },
+    {
+      "journal_id": "pm_journal_cssci_003",
+      "name": "公共行政评论",
+      "aliases": ["Journal of Public Administration"],
+      "source_index": ["CSSCI"],
+      "tier": "CSSCI",
+      "field": "公共管理",
+      "country_region": "CN",
+      "notes": "公共行政与公共政策方向中文种子期刊"
+    },
+    {
+      "journal_id": "pm_journal_cssci_004",
+      "name": "行政论坛",
+      "aliases": ["Administrative Tribune"],
+      "source_index": ["CSSCI"],
+      "tier": "CSSCI",
+      "field": "公共管理",
+      "country_region": "CN",
+      "notes": "公共行政、政府治理与政策研究方向"
+    },
+    {
+      "journal_id": "pm_journal_ssci_001",
+      "name": "Public Administration Review",
+      "aliases": ["PAR"],
+      "source_index": ["SSCI"],
+      "tier": "SSCI",
+      "field": "Public Administration",
+      "country_region": "INTL",
+      "notes": "公共行政领域国际种子期刊"
+    },
+    {
+      "journal_id": "pm_journal_ssci_002",
+      "name": "Journal of Public Administration Research and Theory",
+      "aliases": ["JPART"],
+      "source_index": ["SSCI"],
+      "tier": "SSCI",
+      "field": "Public Administration",
+      "country_region": "INTL",
+      "notes": "公共管理与公共行政理论方向国际种子期刊"
+    },
+    {
+      "journal_id": "pm_journal_ssci_003",
+      "name": "Governance",
+      "aliases": ["Governance: An International Journal of Policy, Administration, and Institutions"],
+      "source_index": ["SSCI"],
+      "tier": "SSCI",
+      "field": "Public Administration",
+      "country_region": "INTL",
+      "notes": "治理、制度与政策方向国际种子期刊"
+    },
+    {
+      "journal_id": "pm_journal_ssci_004",
+      "name": "Policy Sciences",
+      "aliases": [],
+      "source_index": ["SSCI"],
+      "tier": "SSCI",
+      "field": "Public Policy",
+      "country_region": "INTL",
+      "notes": "公共政策与政策科学方向国际种子期刊"
+    }
+  ]
+}

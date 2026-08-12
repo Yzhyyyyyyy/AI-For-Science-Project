@@ -1,0 +1,22 @@
+{
+  "paper_info": {
+    "title": "图神经网络应用研究",
+    "authors": [],
+    "abstract": "本文将图神经网络用于风险预测，实验显示方法有效。",
+    "keywords": []
+  },
+  "metadata": {
+    "journal": "未知",
+    "journal_level": "未知",
+    "citation_count": 0,
+    "publication_year": 2025,
+    "open_data": false,
+    "external_sources": []
+  },
+  "full_text": "仅提供摘要，方法、数据、结果、相关工作和结论正文均未提供。",
+  "review_context": {
+    "target_domain": "计算机科学",
+    "evaluation_purpose": "科研成果影响力分析",
+    "retry_feedback": null
+  }
+}

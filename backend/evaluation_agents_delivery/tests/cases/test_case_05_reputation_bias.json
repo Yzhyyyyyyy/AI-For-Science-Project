@@ -1,0 +1,22 @@
+{
+  "paper_info": {
+    "title": "基于单一样本的通用预测方法",
+    "authors": ["知名作者A"],
+    "abstract": "本文根据一个样本的观察结果，提出适用于所有场景的通用规律。",
+    "keywords": ["通用预测"]
+  },
+  "metadata": {
+    "journal": "示例顶级期刊",
+    "journal_level": "顶级",
+    "citation_count": 10000,
+    "publication_year": 2024,
+    "open_data": false,
+    "external_sources": []
+  },
+  "full_text": "研究只分析一个样本，没有对照实验、统计检验或外部验证。作者由该样本直接推断方法适用于所有领域。",
+  "review_context": {
+    "target_domain": "跨学科",
+    "evaluation_purpose": "科研成果影响力分析",
+    "retry_feedback": null
+  }
+}

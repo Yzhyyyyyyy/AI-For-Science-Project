@@ -1,0 +1,22 @@
+{
+  "paper_info": {
+    "title": "一种普适疾病诊断模型",
+    "authors": [],
+    "abstract": "模型在全部收集数据上训练并测试后准确率为99.8%，证明可用于所有人群。",
+    "keywords": ["疾病诊断", "机器学习"]
+  },
+  "metadata": {
+    "journal": "未知",
+    "journal_level": "未知",
+    "citation_count": 0,
+    "publication_year": 2025,
+    "open_data": false,
+    "external_sources": []
+  },
+  "full_text": "研究未说明数据来源和样本数量。作者使用全部数据训练模型，又使用同一批数据测试，得到99.8%的准确率。论文未报告疾病类别分布、误差指标、对照方法、伦理审批或隐私处理。结论称该模型适合所有地区、年龄和人群。",
+  "review_context": {
+    "target_domain": "医学人工智能",
+    "evaluation_purpose": "科研成果影响力分析",
+    "retry_feedback": null
+  }
+}

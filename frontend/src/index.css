@@ -1,0 +1,200 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* ============================================================
+   Grid Magnifier Background (background-size illusion)
+   ============================================================ */
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #f8fafc;
+}
+
+.app-shell {
+  isolation: isolate;
+  background: #f8fafc;
+}
+
+/* Layer 1: base grid (40px) */
+.grid-base {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.18) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Layer 2: larger grid (60px) — background-size difference creates magnifier illusion */
+.grid-magnifier {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(59, 130, 246, 0.24) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.24) 1.5px, transparent 1.5px);
+  background-size: 60px 60px;
+  opacity: 0.72;
+  -webkit-mask-image: radial-gradient(
+    circle 120px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    black 0%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    circle 120px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    black 0%,
+    transparent 100%
+  );
+}
+
+/* Opaque UI surfaces keep the decorative grid in the page background. */
+.surface-opaque {
+  background-color: #fff;
+  background-clip: padding-box;
+  isolation: isolate;
+}
+
+/* Only the active processing indicator breathes; completed log entries stay still. */
+@keyframes processingBreath {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.08);
+  }
+  50% {
+    transform: scale(1.035);
+    box-shadow: 0 0 0 6px rgba(59, 130, 246, 0);
+  }
+}
+
+.processing-breath {
+  animation: processingBreath 1.8s ease-in-out infinite;
+  transform-origin: left center;
+  will-change: transform;
+}
+
+@keyframes elapsedNumberFlip {
+  0% {
+    opacity: 0;
+    transform: translateY(-0.7em) rotateX(-82deg);
+  }
+  55% {
+    opacity: 1;
+    transform: translateY(0.08em) rotateX(8deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+  }
+}
+
+.elapsed-number-flip {
+  display: inline-block;
+  min-width: 2ch;
+  margin-inline: 0.12em;
+  color: #2563eb;
+  font-weight: 700;
+  text-align: right;
+  transform-origin: center bottom;
+  animation: elapsedNumberFlip 320ms cubic-bezier(0.2, 0.75, 0.25, 1);
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .processing-breath,
+  .elapsed-number-flip {
+    animation: none;
+  }
+}
+
+/* ============================================================
+   3D Tilt Card
+   ============================================================ */
+.tilt-card {
+  transition: transform 0.15s ease-out, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* ============================================================
+   Weight Slider — custom range thumb
+   ============================================================ */
+.weight-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.weight-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #94a3b8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  transition: border-color 0.15s ease;
+}
+
+.weight-slider::-webkit-slider-thumb:hover {
+  border-color: #3b82f6;
+}
+
+.weight-slider:disabled::-webkit-slider-thumb {
+  background: #e2e8f0;
+  border-color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+.weight-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #94a3b8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.weight-slider::-moz-range-thumb:hover {
+  border-color: #3b82f6;
+}
+
+.weight-slider:disabled::-moz-range-thumb {
+  background: #e2e8f0;
+  border-color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* ============================================================
+   Dev Panel fade-in
+   ============================================================ */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.dev-panel-enter {
+  animation: fadeIn 0.25s ease-out;
+}
+
+/* ============================================================
+   .no-print — utility class for UI elements excluded from export
+   (the PDF export uses a separate hidden DOM, so @media print
+   targeting is not needed.)
+   ============================================================ */
+.no-print {
+  /* Reserved for future use. The current PDF export builds its
+     own clean DOM from Markdown and does not capture the page. */
+}
+
+/* ============================================================
+   PDF page-break helper — prevent text/cards from being cut
+   ============================================================ */
+.avoid-page-break {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+}

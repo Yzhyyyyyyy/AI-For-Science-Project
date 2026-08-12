@@ -1,0 +1,22 @@
+{
+  "paper_info": {
+    "title": "多中心空气质量预测模型的构建与验证",
+    "authors": [],
+    "abstract": "研究使用五个城市连续三年的公开监测数据，比较四种基线模型，并开展跨城市验证。",
+    "keywords": ["空气质量", "多中心验证", "时间序列"]
+  },
+  "metadata": {
+    "journal": "未知",
+    "journal_level": "未知",
+    "citation_count": 0,
+    "publication_year": 2025,
+    "open_data": true,
+    "external_sources": ["城市空气质量开放平台"]
+  },
+  "full_text": "数据来自五个城市的公开监测平台，时间范围为2022年1月至2024年12月。研究说明了缺失值插补规则、异常值阈值和变量单位，按时间划分训练集与测试集，避免未来信息泄漏。模型与四种基线进行比较，并报告平均绝对误差、置信区间和跨城市结果。代码与数据处理脚本已公开。作者指出结果仍可能受传感器差异影响。",
+  "review_context": {
+    "target_domain": "环境科学",
+    "evaluation_purpose": "科研成果影响力分析",
+    "retry_feedback": null
+  }
+}

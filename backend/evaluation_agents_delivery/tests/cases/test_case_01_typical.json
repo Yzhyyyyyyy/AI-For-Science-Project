@@ -1,0 +1,22 @@
+{
+  "paper_info": {
+    "title": "基于深度学习的大学生成绩预测研究",
+    "authors": ["张三", "李四"],
+    "abstract": "本研究使用某高校计算机学院120名学生的数据训练成绩预测模型，模型准确率达到92%，因此证明该模型能够适用于全国高校学生。",
+    "keywords": ["深度学习", "成绩预测", "教育数据"]
+  },
+  "metadata": {
+    "journal": "示例期刊",
+    "journal_level": "未知",
+    "citation_count": 3,
+    "publication_year": 2025,
+    "open_data": false,
+    "external_sources": []
+  },
+  "full_text": "研究采集某高校计算机学院120名学生的课程成绩、出勤率和网络学习时长。论文未说明学生是否知情，也未说明缺失值处理方式。研究随机选择80%的样本训练模型，20%的样本测试模型，最终准确率为92%。论文没有与其他模型进行对比，也没有进行跨学校测试。作者据此认为，该方法可以广泛应用于全国高校学生成绩预测。",
+  "review_context": {
+    "target_domain": "教育人工智能",
+    "evaluation_purpose": "科研成果影响力分析",
+    "retry_feedback": null
+  }
+}

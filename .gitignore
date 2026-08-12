@@ -1,0 +1,89 @@
+# =========================
+# AI学术审查系统 v5.1 .gitignore
+# =========================
+
+# Environment / Secrets
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+frontend/.env
+frontend/.env.*
+*.key
+*.pem
+*.p12
+*.crt
+*.cert
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+ENV/
+pip-wheel-metadata/
+*.egg-info/
+build/
+
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+frontend/.vite/
+frontend/.cache/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+
+# Keep frontend/dist because backend serves built frontend statically
+!frontend/dist/
+!frontend/dist/**
+
+# Runtime data
+backend/runtime/system.log
+backend/runtime/*.log
+backend/runtime/**/*.log
+backend/runtime/*.db
+backend/runtime/*.sqlite
+backend/runtime/*.sqlite3
+backend/runtime/cache/
+backend/runtime/uploads/
+backend/runtime/error_tickets/
+backend/runtime/*.jsonl
+backend/runtime/**/*.jsonl
+
+# Uploaded or generated documents
+uploads/
+cache/
+*.pdf
+*.doc
+*.docx
+*.tmp
+*.temp
+
+# Local IDE / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.cursor/
+.claude/
+
+# Local release artifacts
+RELEASE_TREE.txt
+RELEASE_PACKAGE_REPORT_LOCAL.md
+GITHUB_RELEASE_REPORT_LOCAL.md
+
+# Archives
+*.zip
+*.rar
+*.7z
